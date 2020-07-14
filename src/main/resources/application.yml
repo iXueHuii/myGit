@@ -1,0 +1,23 @@
+server:
+  port: 28086
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/weichen?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+
+mybatis-plus:
+  mapper-locations: classpath*:com/wcjs/project/**/mapping/*.xml
+  global-config:
+    id-type: 0
+    db-column-underline: false
+    refresh-mapper: true
+    logic-delete-value: 0
+    logic-not-delete-value: 1
+  configuration:
+    map-underscore-to-camel-case: false
+    cache-enabled: true
+    lazyLoadingEnabled: true
+    multipleResultSetsEnabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
