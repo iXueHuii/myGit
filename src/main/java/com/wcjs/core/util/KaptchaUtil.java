@@ -13,43 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wcjs.core.constant;
+package com.wcjs.core.util;
+
+import com.wcjs.config.properties.WeiChenProperties;
 
 /**
- * 系统常量
+ * 验证码工具类
  */
-public interface Const {
+public class KaptchaUtil {
 
     /**
-     * 默认管理系统的名称
+     * 获取验证码开关
      */
-    String DEFAULT_SYSTEM_NAME = "威辰金属";
-
-    /**
-     * 默认欢迎界面的提示
-     */
-    String DEFAULT_WELCOME_TIP = "欢迎使用威辰金属管理系统!";
-
-    /**
-     * 系统默认的管理员密码
-     */
-    String DEFAULT_PWD = "123456";
-
-    /**
-     * 管理员角色的名字
-     */
-    String ADMIN_NAME = "administrator";
-
-    /**
-     * 管理员id
-     */
-    Integer ADMIN_ID = 1;
-
-    /**
-     * 超级管理员角色id
-     */
-    Integer ADMIN_ROLE_ID = 1;
-
-
-
+    public static Boolean getKaptchaOnOff() {
+        return SpringContextHolder.getBean(WeiChenProperties.class).getKaptchaOpen();
+    }
 }

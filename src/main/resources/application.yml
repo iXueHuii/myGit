@@ -21,3 +21,6 @@ mybatis-plus:
     lazyLoadingEnabled: true
     multipleResultSetsEnabled: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+beetl:
+  resource-auto-check: true         #热加载beetl模板，开发时候用

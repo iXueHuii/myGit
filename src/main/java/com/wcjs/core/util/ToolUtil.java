@@ -68,4 +68,14 @@ public class ToolUtil {
         }
         return sb.toString();
     }
+
+    /**
+     * 获取临时目录
+     *
+     * @author stylefeng
+     * @Date 2017/5/24 22:35
+     */
+    public static String getTempPath() {
+        return System.getProperty("java.io.tmpdir");
+    }
 }
